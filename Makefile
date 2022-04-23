@@ -176,6 +176,7 @@ endif
 ifeq ($(BUILD_ENTERPRISE_READY),true)
   ifeq (,$(findstring openldap,$(ENABLED_DOCKER_SERVICES)))
     TEMP_DOCKER_SERVICES:=$(TEMP_DOCKER_SERVICES) openldap
+	
   endif
   ifeq (,$(findstring elasticsearch,$(ENABLED_DOCKER_SERVICES)))
     TEMP_DOCKER_SERVICES:=$(TEMP_DOCKER_SERVICES) elasticsearch
